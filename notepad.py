@@ -12,13 +12,13 @@ def save_file():
 
 def maker():
     help_view = Toplevel(window)
-    help_view.geometry("800x600")
+    help_view.geometry("300x50")
     help_view.title("제목")
     lb = Label(help_view, text = "안녕하세요 .")
     lb.pack()
 window = Tk()
 window.title("Notepad")
-window.geometry("400x400")
+window.geometry("800x600")
 window.resizable(False, False)
 menu = Menu(window)
 menu_1 = Menu(menu, tearoff=0)
@@ -35,3 +35,5 @@ window.grid_rowconfigure(0, weight=1)
 window.grid_columnconfigure(0, weight=1)
 text_area.grid(sticky = N + E + S + W)
 window.config(menu=menu)
+
+window.mainloop()
